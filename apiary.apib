@@ -196,7 +196,7 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                 ]
             }
 
-## Check update necessity [/projects?country=be&check=true&timestamp=1467113724]
+## Check update necessity [/projects?country=be&check=true&timestamp=1467731234]
 
 ### Get update count [GET]
 
@@ -208,3 +208,139 @@ Polls is a simple API allowing consumers to view polls and vote in them.
             Item-Count: 2
             Picture-Count: 12
             Pictures-Size: 75700202
+
+## Get update [/projects?country=be&timestamp=1467731234]
+
+### Get update list [GET]
+
++ Response 200 (application/json)
+
+
+    + Headers
+
+            Item-Count: 2
+            Picture-Count: 5
+            Pictures-Size: 30044077
+
+    + Body
+
+            {
+                "types": [
+                    {
+                        "id":"1",
+                        "translations":[
+                            {
+                                "lang":"fr",
+                                "title":"Commercial"
+                            },{
+                                "lang":"nl",
+                                "title":"Commercieel"
+                            }
+                        ]
+                    }, {
+                        "id":"4",
+                        "translations":[
+                            {
+                                "lang":"fr",
+                                "title":"\u00c9ducation"
+                            },{
+                                "lang":"nl",
+                                "title":"Scholen"
+                            }
+                        ]
+                    },{
+                        "id":"3",
+                        "translations":[
+                            {
+                                "lang":"fr",
+                                "title":"Hotellerie"
+                            },{
+                                "lang":"nl",
+                                "title":"Horeca"
+                            }
+                        ]
+                    },{
+                        "id":"2",
+                        "translations":[
+                            {
+                                "lang":"fr",
+                                "title":"R\u00e9sidentiel"
+                            },{
+                                "lang":"nl",
+                                "title":"Residentieel"
+                            }
+                        ]
+                    }
+                ]
+                "items":[
+                    {
+                        "id":"1",
+                        "realisation-date":"2007",
+                        "translations":[
+                            {
+                                "lang":"fr",
+                                "title":"Copernic",
+                                "description":"",
+                                "location":"Cournon d\u2019Auvergne, France"
+                            },{
+                                "lang":"nl",
+                                "title":"Copernic",
+                                "description":"",
+                                "location":"Cournon d\u2019Auvergne, Frankrijk"
+                            }
+                        ],
+                        "type":["1","2"],
+                        "images":[
+                            {
+                                "id":"1",
+                                "image":"http://api.aluk.com/projects/images/copernic_01_1920x1920.jpg",
+                                "size":6376763,
+                                "translations":[
+                                    {
+                                        "lang":"fr",
+                                        "title":"Example de titre d\u2019image",
+                                        "description":"Example de description d\u2019image"
+                                    },{
+                                        "lang":"nl",
+                                        "title":"Sample picture title",
+                                        "description":"Sample picture description"
+                                    }
+                                ]
+                            },{
+                                "id":"2",
+                                "image":"http://api.aluk.com/projects/images/copernic_02_1920x1920.jpg",
+                                "size":6919929,
+                                "translations":null
+                            },{
+                                "id":"3",
+                                "image":"http://api.aluk.com/projects/images/copernic_03_1920x1920.jpg",
+                                "size":7881773,
+                                "translations":null
+                            },{
+                                "id":"5",
+                                "image":"http://api.aluk.com/projects/images/copernic_05_1920x1920.jpg",
+                                "size":5082273,
+                                "translations":null
+                            },{
+                                "id":"6",
+                                "image":"http://api.aluk.com/projects/images/copernic_06_1920x1920.jpg",
+                                "size":5038045,
+                                "translations":null
+                            }
+                        ],
+                        "products":[
+                            {
+                                "id":"176"
+                            },{
+                                "id":"207"
+                            }
+                        ],
+                        "deleted_images":[
+                            "4"
+                        ]
+                    }
+                ],
+                "deleted_items":[
+                    "2"
+                ]
+            }
