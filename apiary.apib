@@ -6,7 +6,7 @@ HOST: http://api.aluk.com/
 Simple use case
 Polls is a simple API allowing consumers to view polls and vote in them.
 
-## Projects Collection [/projects?country=be]
+## Initial projects Collection [/projects?country=be]
 
 ### List All Projects [GET]
 
@@ -195,3 +195,16 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                     }
                 ]
             }
+
+## Check update necessity [/projects?country=be&check=true&timestamp=1467113724]
+
+### List All Projects [GET]
+
++ Response 200 (application/json)
+
+
+    + Headers
+
+            Item-Count: 2
+            Picture-Count: 12
+            Pictures-Size: 75700202
