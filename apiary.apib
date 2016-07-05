@@ -1,81 +1,197 @@
 FORMAT: 1A
-HOST: http://polls.apiblueprint.org/
+HOST: http://api.aluk.com/
 
 # AluK
 
 Simple use case
 Polls is a simple API allowing consumers to view polls and vote in them.
 
-## Questions Collection [/questions]
+## Projects Collection [/projects?country=be]
 
-### List All Questions [GET]
+### List All Projects [GET]
 
 + Response 200 (application/json)
 
-        [
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
-            }
-        ]
-
-### Create a New Question [POST]
-
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
-
-+ Request (application/json)
-
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
-
-+ Response 201 (application/json)
 
     + Headers
 
-            Location: /questions/2
+            Item-Count: 2
+            Picture-Count: 12
+            Pictures-Size: 75700202
 
     + Body
 
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
+                "types": [
                     {
-                        "choice": "Swift",
-                        "votes": 0
+                        "id":"1",
+                        "translations":[
+                            {
+                                "lang":"fr",
+                                "title":"Commercial"
+                            },{
+                                "lang":"nl",
+                                "title":"Commercieel"
+                            }
+                        ]
                     }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
+                        "id":"4",
+                        "translations":[
+                            {
+                                "lang":"fr",
+                                "title":"\u00c9ducation"
+                            },{
+                                "lang":"nl",
+                                "title":"Scholen"
+                            }
+                        ]
+                    },{
+                        "id":"3",
+                        "translations":[
+                            {
+                                "lang":"fr",
+                                "title":"Hotellerie"
+                            },{
+                                "lang":"nl",
+                                "title":"Horeca"
+                            }
+                        ]
+                    },{
+                        "id":"2",
+                        "translations":[
+                            {
+                                "lang":"fr",
+                                "title":"R\u00e9sidentiel"
+                            },{
+                                "lang":"nl",
+                                "title":"Residentieel"
+                            }
+                        ]
+                    }
+                ]
+                "items":[
+                    {
+                        "id":"1",
+                        "realisation-date":"2007",
+                        "translations":[
+                            {
+                                "lang":"fr",
+                                "title":"Copernic",
+                                "description":"",
+                                "location":"Cournon d\u2019Auvergne, France"
+                            },{
+                                "lang":"nl",
+                                "title":"Copernic",
+                                "description":"",
+                                "location":"Cournon d\u2019Auvergne, Frankrijk"
+                            }
+                        ],
+                        "type":["1","2"],
+                        "images":[
+                            {
+                                "id":"1",
+                                "image":"http:\/\/api.aluk.lan\/projects\/images\/copernic_01_1920x1920.jpg",
+                                "size":6376763,
+                                "translations":[
+                                    {
+                                        "lang":"fr",
+                                        "title":"Example de titre d\u2019image",
+                                        "description":"Example de description d\u2019image"
+                                    },{
+                                        "lang":"nl",
+                                        "title":"Sample picture title",
+                                        "description":"Sample picture description"
+                                    }
+                                ]
+                            },{
+                                "id":"2",
+                                "image":"http:\/\/api.aluk.lan\/projects\/images\/copernic_02_1920x1920.jpg",
+                                "size":6919929,
+                                "translations":null
+                            },{
+                                "id":"3",
+                                "image":"http:\/\/api.aluk.lan\/projects\/images\/copernic_03_1920x1920.jpg",
+                                "size":7881773,
+                                "translations":null
+                            },{
+                                "id":"4",
+                                "image":"http:\/\/api.aluk.lan\/projects\/images\/copernic_04_1920x1920.jpg",
+                                "size":5790614,
+                                "translations":null
+                            },{
+                                "id":"5",
+                                "image":"http:\/\/api.aluk.lan\/projects\/images\/copernic_05_1920x1920.jpg",
+                                "size":5082273,
+                                "translations":null
+                            },{
+                                "id":"6",
+                                "image":"http:\/\/api.aluk.lan\/projects\/images\/copernic_06_1920x1920.jpg",
+                                "size":5038045,
+                                "translations":null
+                            }
+                        ],
+                        "products":[
+                            {
+                                "id":"176"
+                            },{
+                                "id":"207"
+                            }
+                        ]
+                    },{
+                        "id":"2",
+                        "realisation-date":"2011",
+                        "translations":[
+                            {
+                                "lang":"fr",
+                                "title":"Porsche",
+                                "description":"",
+                                "location":"Epagny, France"
+                            },{
+                                "lang":"nl",
+                                "title":"Porsche",
+                                "description":"",
+                                "location":"Epagny, Frankrijk"
+                            }
+                        ],
+                        "type":["1"],
+                        "images":[
+                            {
+                                "id":"7",
+                                "image":"http:\/\/api.aluk.lan\/projects\/images\/porsche_01_1920x1920.jpg",
+                                "size":6184025,
+                                "translations":null
+                            },{
+                                "id":"8",
+                                "image":"http:\/\/api.aluk.lan\/projects\/images\/porsche_02_1920x1920.jpg",
+                                "size":8566728,
+                                "translations":null
+                            },{
+                                "id":"9",
+                                "image":"http:\/\/api.aluk.lan\/projects\/images\/porsche_03_1920x1920.jpg",
+                                "size":5234036,
+                                "translations":null
+                            },{
+                                "id":"10",
+                                "image":"http:\/\/api.aluk.lan\/projects\/images\/porsche_04_1920x1920.jpg",
+                                "size":6208304,
+                                "translations":null
+                            },{
+                                "id":"11",
+                                "image":"http:\/\/api.aluk.lan\/projects\/images\/porsche_05_1920x1920.jpg",
+                                "size":6249912,
+                                "translations":null
+                            },{
+                                "id":"12",
+                                "image":"http:\/\/api.aluk.lan\/projects\/images\/porsche_06_1920x1920.jpg",
+                                "size":6167800,
+                                "translations":null
+                            }
+                        ],
+                        "products":[
+                            {
+                                "id":"207"
+                            }
+                        ]
                     }
                 ]
             }
