@@ -6,7 +6,7 @@ HOST: http://api.aluk.com/
 Simple use case
 Polls is a simple API allowing consumers to view polls and vote in them.
 
-## Initial projects Collection [/projects?country=be]
+## Initial projects Collection [/project?country=be]
 
 ### List All Projects [GET]
 
@@ -69,7 +69,7 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                         ]
                     }
                 ]
-                "items":[
+                "newOrUpdate":[
                     {
                         "id":"1",
                         "realisation-date":"2007",
@@ -196,20 +196,20 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                 ]
             }
 
-## Check update necessity [/projects?country=be&check=true&timestamp=1467731234]
+## Check update necessity [/project?country=be&check=true%26timestamp=1467731234]
 
 ### Get update count [GET]
 
 + Response 200 (application/json)
 
 
-    + Headers
+        {
+            "item_count":2,
+            "picture_count":5,
+            "pictures_size":30044077
+        }
 
-            Item-Count: 2
-            Picture-Count: 5
-            Pictures-Size: 30044077
-
-## Get update [/projects?country=be&timestamp=1467731234]
+## Get update [/project?country=be%26timestamp=1467731234]
 
 ### Get update list [GET]
 
@@ -272,7 +272,7 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                         ]
                     }
                 ]
-                "items":[
+                "newOrUpdate":[
                     {
                         "id":"1",
                         "realisation-date":"2007",
@@ -340,7 +340,7 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                         ]
                     }
                 ],
-                "deleted_items":[
+                "delete":[
                     "2"
                 ]
             }
